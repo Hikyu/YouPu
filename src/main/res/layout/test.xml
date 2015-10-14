@@ -1,0 +1,147 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.65"
+        android:background="#FF5722">
+
+
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop" />
+        <RelativeLayout
+            android:id="@+id/search_header_root"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <include
+                android:id="@+id/include"
+                layout="@layout/search_header"></include>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.35"
+        android:elevation="8dp"
+        android:layout_marginTop="10dp"
+        >
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+
+                    android:layout_alignParentLeft="true"
+                    android:id="@+id/cookname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="鱿鱼炒丝蒜台"
+                    android:textColor="#FF5722"
+                    android:textSize="35sp" />
+
+
+                <TextView
+                    android:id="@+id/meterial"
+                    android:layout_alignLeft="@id/cookname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/cookname"
+                    android:layout_centerHorizontal="true"
+                    android:text="食材："
+                    android:textColor="#FF5722"
+                    android:textSize="30sp" />
+                <TextView
+                    android:id="@+id/meterial_content"
+                    android:layout_alignLeft="@id/cookname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/meterial"
+                    android:layout_centerHorizontal="true"
+                    android:text="食材："
+                    android:textColor="#FF5722"
+                    android:textSize="20sp" />
+                <TextView
+                    android:id="@+id/method"
+                    android:layout_alignLeft="@id/cookname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/meterial_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="做法"
+                    android:textColor="#FF5722"
+                    android:textSize="30sp" />
+                <TextView
+                    android:id="@+id/method_content"
+                    android:layout_alignLeft="@id/cookname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/method"
+                    android:layout_centerHorizontal="true"
+                    android:text="食材："
+                    android:textColor="#FF5722"
+                    android:textSize="20sp" />
+
+            </RelativeLayout>
+        </ScrollView>
+
+        <com.getbase.floatingactionbutton.FloatingActionsMenu
+            android:id="@+id/multiple_actions_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="6dp"
+            fab:fab_addButtonColorNormal="@color/white"
+            fab:fab_addButtonColorPressed="@color/white_pressed"
+            fab:fab_addButtonPlusIconColor="@color/half_black"
+            fab:fab_addButtonStrokeVisible="false"
+            fab:fab_expandDirection="left">
+
+            <com.getbase.floatingactionbutton.FloatingActionButton
+                android:id="@+id/myfav"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                fab:fab_colorNormal="@color/white"
+
+                fab:fab_colorPressed="@color/white_pressed" />
+
+            <com.getbase.floatingactionbutton.FloatingActionButton
+                android:id="@+id/search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                fab:fab_colorNormal="@color/white"
+                fab:fab_colorPressed="@color/white_pressed" />
+
+            <com.getbase.floatingactionbutton.FloatingActionButton
+                android:id="@+id/addfav"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                fab:fab_colorNormal="@color/white"
+
+                fab:fab_colorPressed="@color/white_pressed" />
+
+        </com.getbase.floatingactionbutton.FloatingActionsMenu>
+    </RelativeLayout>
+
+</LinearLayout>
